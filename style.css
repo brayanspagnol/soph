@@ -2233,7 +2233,8 @@ body::before {
 }
 
 .love-message.active {
-    opacity: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .love-message p {
@@ -2333,6 +2334,13 @@ body::before {
         font-size: 16px;
         line-height: 1.7;
         padding: 15px;
+        padding-top: 100vh;
+        z-index: 1;
+    }
+    
+    .love-message.active {
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .love-message p {
@@ -2380,6 +2388,13 @@ body::before {
         font-size: 14px;
         line-height: 1.6;
         padding: 12px;
+        padding-top: 100vh;
+        z-index: 1;
+    }
+    
+    .love-message.active {
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .love-message p {
