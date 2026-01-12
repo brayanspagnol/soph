@@ -2118,7 +2118,7 @@ body::before {
         0 10px 30px rgba(255, 215, 0, 0.6),
         inset 0 2px 10px rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    animation: secretPulse 1.5s ease-in-out infinite, secretAppear 1s ease-out 6s both;
+    animation: secretPulse 1.5s ease-in-out infinite, secretAppear 1s ease-out 2s both;
     transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
@@ -2195,20 +2195,20 @@ body::before {
 /* Texto da Mensagem de Amor - Estilo Star Wars */
 .love-message {
     position: fixed;
-    top: 100%;
+    top: 100vh;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 85%;
     max-width: 600px;
     z-index: 1;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     font-size: 20px;
-    line-height: 1.8;
+    line-height: 2;
     text-align: center;
     font-weight: 400;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
     padding: 20px;
-    animation: scrollUpStarWars 90s linear forwards;
+    animation: scrollUpStarWars 120s linear forwards;
     opacity: 0;
 }
 
@@ -2217,24 +2217,76 @@ body::before {
 }
 
 .love-message p {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    opacity: 0;
 }
 
-/* Último parágrafo em destaque */
-.love-message .p11 {
+/* Animação em cascata - cada parágrafo aparece conforme sobe */
+.love-message.active .p1 {
+    animation: fadeInText 2s ease-out 0s forwards;
+}
+
+.love-message.active .p2 {
+    animation: fadeInText 2s ease-out 8s forwards;
+}
+
+.love-message.active .p3 {
+    animation: fadeInText 2s ease-out 16s forwards;
+}
+
+.love-message.active .p4 {
+    animation: fadeInText 2s ease-out 24s forwards;
+}
+
+.love-message.active .p5 {
+    animation: fadeInText 2s ease-out 32s forwards;
+}
+
+.love-message.active .p6 {
+    animation: fadeInText 2s ease-out 40s forwards;
+}
+
+.love-message.active .p7 {
+    animation: fadeInText 2s ease-out 48s forwards;
+}
+
+.love-message.active .p8 {
+    animation: fadeInText 2s ease-out 56s forwards;
+}
+
+.love-message.active .p9 {
+    animation: fadeInText 2s ease-out 64s forwards;
+}
+
+.love-message.active .p10 {
+    animation: fadeInText 2s ease-out 72s forwards;
+}
+
+.love-message.active .p11 {
+    animation: fadeInText 2s ease-out 80s forwards;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 28px;
     color: #ff80ab;
     margin-top: 60px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
+    text-shadow: 0 2px 15px rgba(255, 128, 171, 0.8);
 }
 
 @keyframes scrollUpStarWars {
     0% {
-        top: 100%;
+        top: 100vh;
     }
     100% {
-        top: -200%;
+        top: -300vh;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -2242,25 +2294,67 @@ body::before {
 @media (max-width: 768px) {
     .secret-button {
         top: 20px;
-        padding: 15px 30px;
+        padding: 12px 24px;
     }
     
     .secret-icon {
-        font-size: 32px;
+        font-size: 28px;
     }
     
     .secret-text {
-        font-size: 14px;
+        font-size: 12px;
+        letter-spacing: 1px;
     }
     
     .love-message {
-        width: 90%;
-        font-size: 18px;
-        line-height: 1.6;
+        width: 95%;
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 15px;
+    }
+    
+    .love-message p {
+        margin-bottom: 35px;
     }
     
     .love-message .p11 {
         font-size: 22px;
+        margin-top: 40px;
+        margin-bottom: 120px;
+    }
+}
+
+/* iPhone específico */
+@media (max-width: 480px) {
+    .secret-button {
+        top: 15px;
+        padding: 10px 20px;
+    }
+    
+    .secret-icon {
+        font-size: 24px;
+    }
+    
+    .secret-text {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+    
+    .love-message {
+        width: 90%;
+        font-size: 14px;
+        line-height: 1.6;
+        padding: 12px;
+    }
+    
+    .love-message p {
+        margin-bottom: 30px;
+    }
+    
+    .love-message .p11 {
+        font-size: 20px;
+        margin-top: 35px;
+        margin-bottom: 100px;
     }
 }
 
