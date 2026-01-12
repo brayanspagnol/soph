@@ -2241,49 +2241,50 @@ body::before {
     will-change: opacity;
 }
 
-/* Animação em cascata - cada parágrafo aparece conforme sobe */
+/* Animação em cascata - cada parágrafo aparece em sequência conforme o texto sobe */
+/* Intervalos de 7 segundos entre cada parágrafo para que apareçam na parte inferior da tela */
 .love-message.active .p1 {
-    animation: fadeInText 2s ease-out 0s forwards;
+    animation: fadeInText 1.5s ease-out 0s forwards;
 }
 
 .love-message.active .p2 {
-    animation: fadeInText 2s ease-out 8s forwards;
+    animation: fadeInText 1.5s ease-out 7s forwards;
 }
 
 .love-message.active .p3 {
-    animation: fadeInText 2s ease-out 16s forwards;
+    animation: fadeInText 1.5s ease-out 14s forwards;
 }
 
 .love-message.active .p4 {
-    animation: fadeInText 2s ease-out 24s forwards;
+    animation: fadeInText 1.5s ease-out 21s forwards;
 }
 
 .love-message.active .p5 {
-    animation: fadeInText 2s ease-out 32s forwards;
+    animation: fadeInText 1.5s ease-out 28s forwards;
 }
 
 .love-message.active .p6 {
-    animation: fadeInText 2s ease-out 40s forwards;
+    animation: fadeInText 1.5s ease-out 35s forwards;
 }
 
 .love-message.active .p7 {
-    animation: fadeInText 2s ease-out 48s forwards;
+    animation: fadeInText 1.5s ease-out 42s forwards;
 }
 
 .love-message.active .p8 {
-    animation: fadeInText 2s ease-out 56s forwards;
+    animation: fadeInText 1.5s ease-out 49s forwards;
 }
 
 .love-message.active .p9 {
-    animation: fadeInText 2s ease-out 64s forwards;
+    animation: fadeInText 1.5s ease-out 56s forwards;
 }
 
 .love-message.active .p10 {
-    animation: fadeInText 2s ease-out 72s forwards;
+    animation: fadeInText 1.5s ease-out 63s forwards;
 }
 
 .love-message.active .p11 {
-    animation: fadeInText 2s ease-out 80s forwards;
+    animation: fadeInText 1.5s ease-out 70s forwards;
     font-weight: 700;
     font-size: 28px;
     color: #ff80ab;
@@ -2297,7 +2298,7 @@ body::before {
         transform: translateX(-50%) translateY(0);
     }
     100% {
-        transform: translateX(-50%) translateY(-400vh);
+        transform: translateX(-50%) translateY(-450vh);
     }
 }
 
