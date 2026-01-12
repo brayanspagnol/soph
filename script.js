@@ -492,6 +492,9 @@ function setupSecretButton() {
         // Esconde o botão com animação
         secretButton.classList.add('hidden');
         
+        // Ajusta altura antes de mostrar o texto
+        setViewportHeight();
+        
         // Ativa a mensagem de amor
         setTimeout(() => {
             loveMessage.classList.add('active');
@@ -528,6 +531,19 @@ function createConfetti() {
         }, 4000);
     }
 }
+
+// Ajusta altura do viewport para mobile (especialmente iOS Safari)
+function setViewportHeight() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Inicializa na carga da página
+setViewportHeight();
+window.addEventListener('resize', setViewportHeight);
+window.addEventListener('orientationchange', function() {
+    setTimeout(setViewportHeight, 100);
+});
 
 // Adiciona animação de queda para o confete
 const style = document.createElement('style');
