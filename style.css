@@ -2211,7 +2211,7 @@ body::before {
 /* Texto da Mensagem de Amor - Estilo Star Wars */
 .love-message {
     position: fixed;
-    top: 100vh;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
@@ -2224,6 +2224,7 @@ body::before {
     font-weight: 400;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
     padding: 20px;
+    padding-top: 100vh;
     animation: scrollUpStarWars 120s linear forwards;
     opacity: 0;
     will-change: transform, opacity;
@@ -2241,50 +2242,50 @@ body::before {
     will-change: opacity;
 }
 
-/* Animação em cascata - cada parágrafo aparece em sequência conforme o texto sobe */
-/* Intervalos de 7 segundos entre cada parágrafo para que apareçam na parte inferior da tela */
+/* Animação em cascata - cada parágrafo aparece na mesma posição visual (80vh do topo da tela) */
+/* Os delays são calculados para que cada parágrafo apareça quando chega na posição 80vh */
 .love-message.active .p1 {
-    animation: fadeInText 1.5s ease-out 0s forwards;
+    animation: fadeInText 1.5s ease-out 1s forwards;
 }
 
 .love-message.active .p2 {
-    animation: fadeInText 1.5s ease-out 7s forwards;
+    animation: fadeInText 1.5s ease-out 8.5s forwards;
 }
 
 .love-message.active .p3 {
-    animation: fadeInText 1.5s ease-out 14s forwards;
+    animation: fadeInText 1.5s ease-out 16s forwards;
 }
 
 .love-message.active .p4 {
-    animation: fadeInText 1.5s ease-out 21s forwards;
+    animation: fadeInText 1.5s ease-out 23.5s forwards;
 }
 
 .love-message.active .p5 {
-    animation: fadeInText 1.5s ease-out 28s forwards;
+    animation: fadeInText 1.5s ease-out 31s forwards;
 }
 
 .love-message.active .p6 {
-    animation: fadeInText 1.5s ease-out 35s forwards;
+    animation: fadeInText 1.5s ease-out 38.5s forwards;
 }
 
 .love-message.active .p7 {
-    animation: fadeInText 1.5s ease-out 42s forwards;
+    animation: fadeInText 1.5s ease-out 46s forwards;
 }
 
 .love-message.active .p8 {
-    animation: fadeInText 1.5s ease-out 49s forwards;
+    animation: fadeInText 1.5s ease-out 53.5s forwards;
 }
 
 .love-message.active .p9 {
-    animation: fadeInText 1.5s ease-out 56s forwards;
+    animation: fadeInText 1.5s ease-out 61s forwards;
 }
 
 .love-message.active .p10 {
-    animation: fadeInText 1.5s ease-out 63s forwards;
+    animation: fadeInText 1.5s ease-out 68.5s forwards;
 }
 
 .love-message.active .p11 {
-    animation: fadeInText 1.5s ease-out 70s forwards;
+    animation: fadeInText 1.5s ease-out 76s forwards;
     font-weight: 700;
     font-size: 28px;
     color: #ff80ab;
@@ -2298,7 +2299,7 @@ body::before {
         transform: translateX(-50%) translateY(0);
     }
     100% {
-        transform: translateX(-50%) translateY(-450vh);
+        transform: translateX(-50%) translateY(-550vh);
     }
 }
 
